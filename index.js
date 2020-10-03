@@ -1,12 +1,12 @@
-const _ = require('lodash');
+const _ = require("lodash");
 
-module.exports = function({ addUtilities, theme }) {
+module.exports = function ({ addUtilities, theme }) {
   const editorColorText = _.map(
     theme("editorColorPalette", {}),
     (value, key) => {
       return {
         [`.has-${key}-text-color`]: {
-          color: value
+          color: value,
         },
       };
     }
@@ -17,23 +17,21 @@ module.exports = function({ addUtilities, theme }) {
     (value, key) => {
       return {
         [`.has-${key}-background-color`]: {
-          backgroundColor: value
+          backgroundColor: value,
         },
       };
     }
   );
 
-  const editorFontSizes = _.map(
-    theme("editorFontSizes", {}),
-    (value, key) => {
-      return {
-        [`.has-${key}-font-size`]: {
-          fontSize: value
-        }
-      };
-    }
-  );
+  const editorFontSizes = _.map(theme("editorFontSizes", {}), (value, key) => {
+    return {
+      [`.has-${key}-font-size`]: {
+        fontSize: value,
+      },
+    };
+  });
 
+  // https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
   const screenReaderText = {
     ".screen-reader-text": {
       border: "0",
@@ -52,18 +50,16 @@ module.exports = function({ addUtilities, theme }) {
         height: "auto",
         overflow: "visible",
         clip: "auto",
-        whiteSpace: "normal"
-      }
-    }
+        whiteSpace: "normal",
+      },
+    },
   };
 
-  addUtilities([
-    editorColorText,
-    editorColorBackground,
-    editorFontSizes,
-    screenReaderText
-  ], {
-    respectPrefix: false,
-    respectImportant: false,
-  });
-}
+  addUtilities(
+    [editorColorText, editorColorBackground, editorFontSizes, screenReaderText],
+    {
+      respectPrefix: false,
+      respectImportant: false,
+    }
+  );
+};
