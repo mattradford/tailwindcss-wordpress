@@ -1,6 +1,6 @@
 {
   "name": "@mattrad/tailwindcss-wordpress",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tailwind CSS plugin for generating WordPress utility classes.",
   "main": "index.js",
   "repository": "git@github.com:mattradford/tailwindcss-wordpress.git",

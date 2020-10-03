@@ -74,7 +74,6 @@ module.exports = function ({ addUtilities, theme }) {
     ".wp-caption": {
       display: "inline-block",
       "& img": {
-        marginBottom: margin[2] || "0.5rem",
         lineHeight: 1,
       },
     },
