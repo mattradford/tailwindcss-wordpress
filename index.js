@@ -1,6 +1,7 @@
 const _ = require("lodash");
 
 module.exports = function ({ addUtilities, theme }) {
+  // Block editor text colour
   const editorColorText = _.map(
     theme("editorColorPalette", {}),
     (value, key) => {
@@ -12,6 +13,7 @@ module.exports = function ({ addUtilities, theme }) {
     }
   );
 
+  // Block editor background colour
   const editorColorBackground = _.map(
     theme("editorColorPalette", {}),
     (value, key) => {
@@ -23,6 +25,7 @@ module.exports = function ({ addUtilities, theme }) {
     }
   );
 
+  // Block editor font sizes
   const editorFontSizes = _.map(theme("editorFontSizes", {}), (value, key) => {
     return {
       [`.has-${key}-font-size`]: {
@@ -31,6 +34,7 @@ module.exports = function ({ addUtilities, theme }) {
     };
   });
 
+  // Screen reader text
   // https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
   const screenReaderText = {
     ".screen-reader-text": {
@@ -55,8 +59,36 @@ module.exports = function ({ addUtilities, theme }) {
     },
   };
 
+  // Alignment utilities
+  const alignmentUtilities = {
+    ".alignnone": {
+      marginLeft: 0,
+      marginRight: 0,
+      maxWidth: "100%",
+      height: "auto",
+    },
+  };
+
+  // Image captions
+  const imageCaptions = {
+    ".wp-caption": {
+      display: "inline-block",
+      "& img": {
+        marginBottom: margin[2] || "0.5rem",
+        lineHeight: 1,
+      },
+    },
+  };
+
   addUtilities(
-    [editorColorText, editorColorBackground, editorFontSizes, screenReaderText],
+    [
+      editorColorText,
+      editorColorBackground,
+      editorFontSizes,
+      screenReaderText,
+      alignmentUtilities,
+      imageCaptions,
+    ],
     {
       respectPrefix: false,
       respectImportant: false,

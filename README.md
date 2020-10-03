@@ -1,12 +1,14 @@
 # Tailwind CSS WordPress Utility Classes
 
-Tailwind CSS plugin for generating WordPress utility classes.
+Tailwind CSS plugin for generating WordPress utility classes - for block editor, accessibility, alignment and image captions.
 
 This plugin currently includes:
 
-- Editor Color Palette classes (`.has-[color]-text-color` and `.has-[color]-background-color`)
-- Editor Font Size classes (`.has-[size]-font-size`)
-- `.screen-reader-text` - WordPress specific accessibility class
+- Block editor colour palette classes: `.has-[color]-text-color` and `.has-[color]-background-color`
+- Block editor font size classes: `.has-[size]-font-size`
+- Accessibility class: `.screen-reader-text`
+- Alignment classes: `.alignnone`
+- Image caption classes: `.wp-caption`
 
 ## Install
 
@@ -34,7 +36,7 @@ This plugin currently includes:
 
 ## Usage
 
-This plugin uses the keys `editorColorPalette` and `editorFontSizes` in your Tailwind config’s `theme` object to generate the utilities. Here is an example:
+Block editor classes use the keys `editorColorPalette` and `editorFontSizes` in your Tailwind config’s `theme` object to generate the utilities. Here is an example:
 
 ```js
 // tailwind.config.js
