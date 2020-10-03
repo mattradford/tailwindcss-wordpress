@@ -14,10 +14,10 @@ This plugin currently includes:
 
   ```bash
   # Using npm
-  npm install @mattradford/tailwindcss-wordpress --save-dev
+  npm install @mattrad/tailwindcss-wordpress --save-dev
 
   # Using Yarn
-  yarn add @mattradford/tailwindcss-wordpress -D
+  yarn add @mattrad/tailwindcss-wordpress -D
   ```
 
 2. Add it to your `tailwind.config.js` file:
@@ -27,7 +27,7 @@ This plugin currently includes:
   module.exports = {
     // ...
     plugins: [
-      require('@mattradford/tailwindcss-wordpress')
+      require('@mattrad/tailwindcss-wordpress')
     ]
   }
   ```
@@ -50,7 +50,7 @@ This plugin uses the keys `editorColorPalette` and `editorFontSizes` in your Tai
     },
   },
   plugins: [
-    require('@mattradford/tailwindcss-wordpress')(),
+    require('@mattrad/tailwindcss-wordpress')(),
   ],
 }
 ```
