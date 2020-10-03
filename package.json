@@ -1,10 +1,10 @@
 {
-  "name": "@brettsmason/tailwindcss-wordpress",
+  "name": "@mattrad/tailwindcss-wordpress",
   "version": "0.1.0",
   "description": "Tailwind CSS plugin for generating WordPress utility classes.",
   "main": "index.js",
-  "repository": "git@github.com:brettsmason/tailwindcss-wordpress.git",
-  "author": "Brett Mason <brettsmason@gmail.com>",
+  "repository": "git@github.com:mattradford/tailwindcss-wordpress.git",
+  "author": "Matt Radford <matt@mattrad.uk>",
   "license": "MIT",
   "keywords": [
     "tailwind",
