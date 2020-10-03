@@ -1,5 +1,5 @@
 {
-  "name": "@mattrad/tailwind-wordpress",
+  "name": "@mattrad/tailwindcss-wordpress",
   "version": "0.1.2",
   "description": "Tailwind CSS plugin for generating WordPress utility classes.",
   "main": "index.js",
