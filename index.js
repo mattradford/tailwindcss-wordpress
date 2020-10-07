@@ -1,7 +1,11 @@
 const _ = require("lodash");
 
 module.exports = function ({ addUtilities, theme }) {
-  // Block editor text colour
+  const margin = theme("margin");
+  const screens = theme("screens");
+  const fontSize = theme("fontSize");
+  const colors = theme("colors");
+
   const editorColorText = _.map(
     theme("editorColorPalette", {}),
     (value, key) => {
@@ -13,7 +17,6 @@ module.exports = function ({ addUtilities, theme }) {
     }
   );
 
-  // Block editor background colour
   const editorColorBackground = _.map(
     theme("editorColorPalette", {}),
     (value, key) => {
@@ -25,7 +28,6 @@ module.exports = function ({ addUtilities, theme }) {
     }
   );
 
-  // Block editor font sizes
   const editorFontSizes = _.map(theme("editorFontSizes", {}), (value, key) => {
     return {
       [`.has-${key}-font-size`]: {
@@ -34,7 +36,6 @@ module.exports = function ({ addUtilities, theme }) {
     };
   });
 
-  // Screen reader text
   // https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
   const screenReaderText = {
     ".screen-reader-text": {
@@ -59,7 +60,6 @@ module.exports = function ({ addUtilities, theme }) {
     },
   };
 
-  // Alignment utilities
   const alignmentUtilities = {
     ".alignnone": {
       marginLeft: 0,
@@ -67,15 +67,33 @@ module.exports = function ({ addUtilities, theme }) {
       maxWidth: "100%",
       height: "auto",
     },
+    ".aligncenter": {
+      display: "block",
+      margin: `${margin[2] || "0.5rem"} auto`,
+    },
+    [`@media (min-width: ${screens.sm || "640px"})`]: {
+      ".alignleft": {
+        float: "left",
+        marginRight: margin[2] || "0.5rem",
+      },
+      ".alignright": {
+        float: "right",
+        marginLeft: margin[2] || "0.5rem",
+      },
+    },
   };
 
-  // Image captions
   const imageCaptions = {
     ".wp-caption": {
       display: "inline-block",
       "& img": {
+        marginBottom: margin[2] || "0.5rem",
         lineHeight: 1,
       },
+    },
+    ".wp-caption-text": {
+      fontSize: fontSize.sm || "0.9rem",
+      color: (colors.gray && colors.gray[600]) || "#718096",
     },
   };
 

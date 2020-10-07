@@ -10,6 +10,9 @@ This plugin currently includes:
 - Alignment classes: `.alignnone`
 - Image caption classes: `.wp-caption`
 
+Props to [@knowler](https://github.com/knowler/tailwindcss-wordpress) and [@brettsmason](https://github.com/brettsmason/tailwindcss-wordpress#readme).
+I've basically combined their work.
+
 ## Install
 
 1. Install the plugin:
@@ -56,3 +59,7 @@ Block editor classes use the keys `editorColorPalette` and `editorFontSizes` in 
   ],
 }
 ```
+
+## To do
+
+- Add support for `.alignfull` and `.alignwide`
