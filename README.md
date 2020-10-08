@@ -2,6 +2,8 @@
 
 Tailwind CSS plugin for generating WordPress utility classes - for block editor, accessibility, alignment and image captions.
 
+I am working through Block editor compatability, so YMMV. Please open a PR on Github if you find a problem or have an improvement to share.
+
 This plugin currently includes:
 
 - Block editor colour palette classes: `.has-[color]-text-color` and `.has-[color]-background-color`
