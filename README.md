@@ -8,6 +8,7 @@ This plugin currently includes:
 - Block editor font size classes: `.has-[size]-font-size`
 - Accessibility class: `.screen-reader-text`
 - Alignment classes: `.alignnone`
+  - Block editor button alignments are now accounted for, i.e. `.wp-block-button.alignleft`
 - Image caption classes: `.wp-caption`
 
 Props to [@knowler](https://github.com/knowler/tailwindcss-wordpress) and [@brettsmason](https://github.com/brettsmason/tailwindcss-wordpress#readme).
