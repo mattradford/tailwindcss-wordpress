@@ -53,8 +53,8 @@ Block editor classes use the keys `editorColorPalette` and `editorFontSizes` in 
       'secondary': '#ccc',
     },
     editorFontSizes: {
-      'small': '16px',
-      'medium': '22px',
+      'small': '0.875rem',
+      'medium': '1.125rem',
     },
   },
   plugins: [
@@ -62,7 +62,3 @@ Block editor classes use the keys `editorColorPalette` and `editorFontSizes` in 
   ],
 }
 ```
-
-## To do
-
-- Add support for `.alignfull` and `.alignwide`

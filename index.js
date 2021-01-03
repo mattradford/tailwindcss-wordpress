@@ -76,10 +76,12 @@ module.exports = function ({ addUtilities, theme }) {
       '.alignleft:not(.wp-block-button)': {
         float: 'left',
         marginRight: margin[2] || '0.5rem',
+        maxWidth: '50%'
       },
       '.alignright:not(.wp-block-button)': {
         float: 'right',
         marginLeft: margin[2] || '0.5rem',
+        maxWidth: '50%'
       },
       ".wp-block-button.alignleft a": {
         float: "left",
